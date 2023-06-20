@@ -1,4 +1,4 @@
-package com.example.passgen
+package com.amirhossein_fzl.passgen
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
+            VALUE "CompanyName", "com.amirhossein_fzl" "\0"
             VALUE "FileDescription", "passgen" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "passgen" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.amirhossein_fzl. All rights reserved." "\0"
             VALUE "OriginalFilename", "passgen.exe" "\0"
             VALUE "ProductName", "passgen" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
