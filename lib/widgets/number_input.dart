@@ -75,7 +75,8 @@ class _NumberInput extends State<NumberInput> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             TextFormField(
-              decoration: const InputDecoration(labelText: "Length"),
+              decoration: const InputDecoration(
+                  labelText: "Length", contentPadding: EdgeInsets.all(0)),
               keyboardType: TextInputType.number,
               controller: controller,
               onChanged: handleChange,
@@ -86,9 +87,9 @@ class _NumberInput extends State<NumberInput> {
             Container(
               margin: const EdgeInsets.only(top: 8.0),
               child: Text(
-              "The length can be a minimum of $min and a maximum of $max",
-              style: Theme.of(context).textTheme.labelMedium,
-            ),
+                "The length can be a minimum of $min and a maximum of $max",
+                style: Theme.of(context).textTheme.labelMedium,
+              ),
             )
           ],
         )),

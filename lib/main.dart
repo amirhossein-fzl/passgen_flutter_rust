@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
             seedColor: Colors.blue, primary: Colors.blue.shade600),
+        fontFamily: "Vazirmatn",
         useMaterial3: true,
       ),
       home: const HomePage(),
@@ -36,18 +37,24 @@ class _HomePageState extends State<HomePage> {
   TextEditingController passController = TextEditingController();
   Future<void> copyPass() async {
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-      content: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Expanded(child: Icon(Icons.task_alt, color: Colors.white,)),
-          Expanded(flex: 9, child: Text("Password copied successfully!"),)
-        ],
-      ),
-      padding: EdgeInsets.all(4.0),
-      duration: Duration(seconds: 3),
-      backgroundColor: Colors.green,
-      behavior: SnackBarBehavior.floating
-    ));
+        content: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Expanded(
+                child: Icon(
+              Icons.task_alt,
+              color: Colors.white,
+            )),
+            Expanded(
+              flex: 9,
+              child: Text("Password copied successfully!"),
+            )
+          ],
+        ),
+        padding: EdgeInsets.all(4.0),
+        duration: Duration(seconds: 3),
+        backgroundColor: Colors.green,
+        behavior: SnackBarBehavior.floating));
 
     await api.copyPassword(pass: passController.text);
   }
@@ -92,7 +99,10 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     flex: 2,
                     child: TextFormField(
-                      decoration: const InputDecoration(labelText: "Password"),
+                      decoration: const InputDecoration(
+                        labelText: "Password",
+                        contentPadding: EdgeInsets.all(0),
+                      ),
                       keyboardType: TextInputType.number,
                       controller: passController,
                       readOnly: true,
